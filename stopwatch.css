@@ -1,0 +1,140 @@
+:root {
+    --primary-color: #ff3e3e;
+    --bg-color: #0f0f0f;
+}
+
+
+/* Cấu trúc cơ bản */
+
+body {
+    background-color: var(--bg-color);
+    color: #ebe9f1;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.container {
+    background: #1a1a1a;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.05);
+    border: 1px solid #333;
+    text-align: center;
+    width: 350px;
+    z-index: 1;
+}
+
+h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+#display {
+    font-size: 3.5rem;
+    font-weight: 700;
+    font-family: 'Courier New', monospace;
+    color: var(--primary-color);
+    text-shadow: 0 0 20px rgba(255, 62, 62, 0.4);
+    margin-bottom: 30px;
+}
+
+
+/* Quản lý các nút bấm */
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+button {
+    width: 100%;
+    padding: 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #2a2a2a !important;
+    /* Ép màu đen xám */
+    border: 1px solid #333;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+button:hover {
+    background-color: var(--primary-color) !important;
+    box-shadow: 0 0 15px var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+
+/* Nút trái tim đặc biệt */
+
+#heartBtn {
+    background: linear-gradient(45deg, #ff3e3e, #8b0000) !important;
+    border: none !important;
+}
+
+
+/* Hiệu ứng trái tim */
+
+#heart-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2000;
+    background-color: black;
+}
+
+#pinkboard {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+}
+
+#backBtn {
+    /* Đặt vị trí */
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 3000;
+    /* Đảm bảo nút không tự giãn ra hết màn hình */
+    width: auto !important;
+    /* Thu nhỏ kích thước bên trong */
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    /* Màu sắc */
+    background: #1a1a1a !important;
+    color: #888;
+    border: 1px solid #333 !important;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Inter', sans-serif;
+    /* Đảm bảo không bị kéo dãn bởi flexbox của cha (nếu có) */
+    flex: none;
+}
+
+#backBtn:hover {
+    background: #333 !important;
+    color: #fff;
+    /* Sáng lên khi di chuột vào */
+    border-color: #555 !important;
+}

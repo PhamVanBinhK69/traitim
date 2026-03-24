@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phần mềm Bấm giờ</title>
+    <link rel="stylesheet" href="stopwatch.css">
+</head>
+
+<body>
+    <div id="stopwatch-container" class="container">
+        <h2>BÌNH ĐẸP TRAI</h2>
+        <div id="display">00:00:00.00</div>
+
+        <div class="buttons">
+            <button id="startBtn">Bắt đầu</button>
+            <button id="stopBtn" class="hidden">Dừng</button>
+            <button id="lapBtn" class="hidden">Vòng chạy</button>
+            <button id="resetBtn" class="hidden">Đặt lại</button>
+            <button id="heartBtn">THẢO NGU LẮM</button>
+        </div>
+
+        <ul id="lapsList"></ul>
+    </div>
+
+    <div id="heart-container" class="hidden">
+        <canvas id="pinkboard"></canvas>
+        <button id="backBtn" style="position:absolute; top:20px; left:20px;">Quay lại</button>
+    </div>
+
+    <script src="bai1.js"></script>
+</body>
+
+</html>
